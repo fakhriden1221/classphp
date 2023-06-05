@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ --> 
     <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -15,28 +16,25 @@
     <header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </button>
             <div class="tm-site-header">
-                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fa fa-times fa-2x"></i></div>
                 <h1 class="text-center">Xtra Blog</h1>
             </div>
             <nav class="tm-nav" id="tm-nav">
                 <ul>
                     <li class="tm-nav-item active"><a href="index.php" class="tm-nav-link">
-                            <i class="fas fa-home"></i>
+                            <i class="fa fa-home"></i>
                             Blog Home
                         </a></li>
+            
                     <li class="tm-nav-item"><a href="index.php" class="tm-nav-link">
-                            <i class="fas fa-pen"></i>
-                            Single Post
-                        </a></li>
-                    <li class="tm-nav-item"><a href="index.php" class="tm-nav-link">
-                            <i class="fas fa-users"></i>
+                            <i class="fa fa-users"></i>
                             About Xtra
                         </a></li>
                     <li class="tm-nav-item"><a href="index.php" class="tm-nav-link">
-                            <i class="far fa-comments"></i>
+                            <i class="fa fa-comments"></i>
                             Contact Us
                         </a></li>
                 </ul>
@@ -51,7 +49,7 @@
                     <form method="GET" class="form-inline tm-mb-80 tm-search-form">
                         <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
                         <button class="tm-search-button" type="submit">
-                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                            <i class="fa fa-search tm-search-icon" aria-hidden="true"></i>
                         </button>
                     </form>
                 </div>
@@ -64,21 +62,19 @@
                         <div class="tm-post-link-inner">
                             <img src="img/img-01.jpg" alt="Image" class="img-fluid">
                         </div>
-                        <span class="position-absolute tm-new-badge">New</span>
-                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Simple and useful HTML layout</h2>
+                        <span class="position-absolute tm-new-badge">Experience Level</span>
+                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Job Title</h2>
                     </a>
                     <p class="tm-pt-30">
-                        There is a clickable image with beautiful hover effect and active title link for each post item.
-                        Left side is a sticky menu bar. Right side is a blog content that will scroll up and down.
-                    </p>
+                       Discription(About the job-Responsibilities-Qualifications) </p>
                     <div class="d-flex justify-content-between tm-pt-45">
-                        <span class="tm-color-primary">Travel . Events</span>
-                        <span class="tm-color-primary">June 24, 2020</span>
+                        <span class="tm-color-primary">Genre . Job Type</span>
+                        <span class="tm-color-primary">Date of post</span>
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between">
-                        <span>36 comments</span>
-                        <span>by Admin Nat</span>
+                        <span>Workplace Type</span>
+                        <span>Location</span>
                     </div>
                 </article>
             </div>
@@ -111,7 +107,7 @@
             <!--footer-->
             <footer class="row tm-row">
                 <hr class="col-12">
-                <div class="col-md-6 col-12 tm-color-gray">
+                 <div class="col-md-6 col-12 tm-color-gray">
                     Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
                 </div>
                 <div class="col-md-6 col-12 tm-color-gray tm-copyright">

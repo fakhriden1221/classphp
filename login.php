@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="classphp/dashboard/css/register.css">
+    <link rel="stylesheet" href="dashboard/css/additional_info.css">
     <title>Login</title>
 </head>
 <body>
@@ -14,12 +14,12 @@
   <form method="POST" action="login_action.php">
 
     <label for="email">Email</label>
-    <input type="email" name="email" placeholder="Email" required>
+    <input type="email" name="email" placeholder="Email"class="form-control" required>
 
     <label for="Pass">Password</label>
-    <input type="password" name="password" placeholder="Password" required>
-
-    <button type="submit" name="submit">Submit</button>
+    <input type="password" name="password" placeholder="Password"class="form-control" required>
+<br>
+    <button type="submit" name="submit">Login</button>
 
   </form>
   <hr>
@@ -27,6 +27,6 @@
 </div>
 
 
-    </div>
+  
 </body>
 </html>

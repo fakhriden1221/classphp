@@ -1,5 +1,5 @@
 <?php
-  include ('connect.php');
+  include ("db_config/connect.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +20,9 @@ session_start();
       <div class="col">
         <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
           <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">User</a></li>
-            <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Update Profile</li>
+            <li class="breadcrumb-item "><a href="Profile.php">User Profile</a></li>
           </ol>
         </nav>
       </div>
@@ -30,7 +30,7 @@ session_start();
     <?php
     $id=$_SESSION['user_info1']['id'];
         $sql = "SELECT * FROM users WHERE id = $id";
-        $result = mysqli_query($con, $sql);
+        $result = mysqli_query($conn, $sql);
 
         if ($result && mysqli_num_rows($result) > 0) {
          while ($row = mysqli_fetch_array($result)) {
@@ -39,8 +39,9 @@ session_start();
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-body text-center">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-              class="rounded-circle img-fluid" style="width: 150px;">
+          <img id="preview_image" src="#" alt="Preview" style="display: none; max-width: 300px; margin-top: 10px;"class="rounded-circle img-fluid" style="width: 150px;">
+            <script src="dashboard/js/image.js"></script>
+              
             <h5 class="my-3"><?= $row['full_name']; ?></h5>
             <p class="text-muted mb-1">Full Stack Developer</p>
             <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
@@ -88,7 +89,7 @@ session_start();
     <form action="update_profile.php" method="POST">
     <?php
         $sql = "SELECT * FROM users WHERE id = $id";
-        $result = mysqli_query($con, $sql);
+        $result = mysqli_query($conn, $sql);
 
         if ($result && mysqli_num_rows($result) > 0) {
          while ($row = mysqli_fetch_array($result)) {

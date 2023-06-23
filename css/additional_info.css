@@ -1,0 +1,76 @@
+body {
+    background: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: lightblue;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: lightblue;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"],
+button {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #165c8e;
+    border-radius: 4px;
+     margin-bottom: 8px; 
+    box-sizing: border-box; 
+}
+
+button {
+    margin-top: 8px;
+    background-color: lightblue;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007acc;
+}
+
+#preview_image {
+    display: none;
+    max-width: 300px;
+    margin-top: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.skip-button {
+    display: inline-block;
+    padding: 8px 16px;
+    color: lightblue;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+  }
+  
+  .skip-button:hover {
+    color: #0088cc;
+  }
+  
+  

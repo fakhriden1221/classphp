@@ -1,3 +1,19 @@
+<?php
+session_start();
+include ("db_config/connect.php");
+include ("functions.php");
+
+if(!$_SESSION['user_info']){
+    header("location:login.php");
+}
+
+$id=$_SESSION['user_info']['id'];
+
+        $sql = "SELECT * FROM users WHERE id = $id";
+        $result = mysqli_query($conn, $sql);
+        $row=mysqli_fetch_assoc($result);
+        $_SESSION['user_info1']=$row;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,28 +29,31 @@
 </head>
 
 <body>
-    <header class="tm-header" id="tm-header">
+   <header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-                <i class="fa fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </button>
             <div class="tm-site-header">
-                <div class="mb-3 mx-auto tm-site-logo"><i class="fa fa-times fa-2x"></i></div>
-                <h1 class="text-center">Xtra Blog</h1>
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+                <h1 class="text-center">JobConnect</h1>
             </div>
             <nav class="tm-nav" id="tm-nav">
                 <ul>
                     <li class="tm-nav-item active"><a href="index.php" class="tm-nav-link">
-                            <i class="fa fa-home"></i>
-                            Blog Home
+                            <i class="fas fa-home"></i>
+                            Home
                         </a></li>
-            
-                    <li class="tm-nav-item"><a href="index.php" class="tm-nav-link">
-                            <i class="fa fa-users"></i>
-                            About Xtra
+                    <li class="tm-nav-item"><a href="profile.php" class="tm-nav-link">
+                            <i class="fas fa-pen"></i>
+                            Profile
+                        </a></li>
+                    <li class="tm-nav-item"><a href="aboutus.php" class="tm-nav-link">
+                            <i class="fas fa-users"></i>
+                            About Us
                         </a></li>
                     <li class="tm-nav-item"><a href="index.php" class="tm-nav-link">
-                            <i class="fa fa-comments"></i>
+                            <i class="far fa-comments"></i>
                             Contact Us
                         </a></li>
                 </ul>
@@ -55,29 +74,13 @@
                 </div>
             </div>
             <!--job opportunities-->
-            <div class="row tm-row">
-                <article class="col-12 col-md-6 tm-post">
-                    <hr class="tm-hr-primary">
-                    <a href="index.php" class="effect-lily tm-post-link tm-pt-60">
-                        <div class="tm-post-link-inner">
-                            <img src="img/img-01.jpg" alt="Image" class="img-fluid">
-                        </div>
-                        <span class="position-absolute tm-new-badge">Experience Level</span>
-                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Job Title</h2>
-                    </a>
-                    <p class="tm-pt-30">
-                       Discription(About the job-Responsibilities-Qualifications) </p>
-                    <div class="d-flex justify-content-between tm-pt-45">
-                        <span class="tm-color-primary">Genre . Job Type</span>
-                        <span class="tm-color-primary">Date of post</span>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between">
-                        <span>Workplace Type</span>
-                        <span>Location</span>
-                    </div>
-                </article>
+            <div class="row tm-row" id="jobs">
+               
+    
+                
             </div>
+              <?php showjobs(); ?><!-- jobs enterd by user-->
+            
             <!--navigation between job opportunities-->
             <div class="row tm-row tm-mt-100 tm-mb-75">
                 <div class="tm-prev-next-wrapper">
@@ -119,7 +122,9 @@
 
     <!-- <script src="js/templatemo-script.js"></script>
 
+
 -->
+<script src="js/main.js" type="module"></script>
 </body>
 
 </html>

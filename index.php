@@ -47,7 +47,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="exp" class="form-label tm-new-badge">Experience Level</label>
               </div>
               <div class="col-sm-9">
-                  <input type="text" name="exp" class="form-control" value="">
+                  <input type="text" name="exp" class="form-control" value="" require>
               </div>
           </div>
           <div class="row mb-3">
@@ -55,7 +55,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="title" class="form-label tm-new-badge">JOB Title</label>
               </div>
               <div class="col-sm-9">
-                  <input type="text" class="form-control" name="title" value="">
+                  <input type="text" class="form-control" name="title" value="" require>
               </div>
           </div>
           <div class="row mb-3">
@@ -63,7 +63,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="dis" class="form-label tm-new-badge">Discription</label>
               </div>
               <div class="col-sm-9">
-                  <input type="text" name="dis" class="form-control" value="">
+                  <input type="text" name="dis" class="form-control" value="" require>
               </div>
           </div>
           <div class="row mb-3">
@@ -71,7 +71,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="res" class="form-label tm-new-badge">Responsibilities</label>
               </div>
               <div class="col-sm-9">
-              <input type="text" class="form-control tm-new-badge" id="address" name="res" value="">
+              <input type="text" class="form-control tm-new-badge" id="address" name="res" value="" require>
               </div>
           </div>
           <div class="row mb-3">
@@ -79,7 +79,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="qua" class="form-label tm-new-badge">Qualification</label>
               </div>
               <div class="col-sm-9">
-                  <input type="text" name="qua" class="form-control" value="">
+                  <input type="text" name="qua" class="form-control" value="" require>
               </div>
           </div>
           <div class="row mb-3">
@@ -87,7 +87,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="type" class="form-label tm-new-badge">Job Type</label>
               </div>
               <div class="col-sm-9">
-                  <input type="text" name="type" class="form-control" value="">
+                  <input type="text" name="type" class="form-control" value="" require>
               </div>
           </div>
           <div class="row mb-3">
@@ -95,7 +95,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="place" class="form-label tm-new-badge">Work Place</label>
               </div>
               <div class="col-sm-9">
-                  <input type="text" name="place" class="form-control" value="">
+                  <input type="text" name="place" class="form-control" value="" require>
               </div>
           </div>
           <div class="row mb-3">
@@ -103,7 +103,7 @@ $id=$_SESSION['user_info']['id'];
                   <label for="location" class="form-label tm-new-badge">Location</label>
               </div>
               <div class="col-sm-9">
-                  <input type="text" name="location" class="form-control" value="">
+                  <input type="text" name="location" class="form-control" value="" require>
               </div>
           </div>
 

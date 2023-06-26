@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $full_name = $_POST['full_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $repeatpassword = $_POST['repeatpassword'];
+    $repeatpassword = $_POST['confirm_password'];
     
     
     

@@ -21,7 +21,7 @@ try {
     document.getElementById("jobs").innerHTML += `
       <article class="col-12 col-md-6 tm-post">
         <hr class="tm-hr-primary">
-        <a href="${element.url}" class="effect-lily tm-post-link tm-pt-60">
+        <a href="${element.url}" class="effect-lily tm-post-link tm-pt-60 text-decoration-none">
           <span class="position-absolute tm-new-badge">${element.company}</span>
           <h2 class="tm-pt-30 tm-color-primary tm-post-title">${element.title}</h2>
         </a>

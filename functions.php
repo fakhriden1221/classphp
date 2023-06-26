@@ -24,7 +24,7 @@ function showjobs()
         ?>
             <article class="col-12 col-md-6 tm-post">
                 <hr class="tm-hr-primary">
-                <a href="index.php" class="effect-lily tm-post-link tm-pt-60">
+                <a href="index.php" class="effect-lily tm-post-link tm-pt-60 text-decoration-none">
                     
                     <span class="position-absolute tm-new-badge"><?php echo $_SESSION['jobs']['ExperienceLevel'] ?></span>
                     <h2 class="tm-pt-30 tm-color-primary tm-post-title"><?php echo $_SESSION['jobs']['JobTitle'] ?></h2>

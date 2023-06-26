@@ -161,7 +161,10 @@ $id=$_SESSION['user_info']['id'];
             </div>
             <?php if($_SESSION['user_info']['admin']==1){
                ?>
-               <a href="index.php?add=1">add</a>
+               <a href="index.php?add=1" class="btn">
+               <span class="tm-new-badge">Add Post</span>
+
+               </a>
          <?php   } ?>
             <!--job opportunities-->
             <div class="row tm-row" id="jobs">

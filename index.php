@@ -37,11 +37,14 @@ $id=$_SESSION['user_info']['id'];
  {
     ?>
                
+               <div class="container">   
+    <h2>Add Post</h2>
+        
     <form method="POST" action="addpost.php"  enctype='multipart/form-data'>
    
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="exp" class="form-label">Experience Level</label>
+                  <label for="exp" class="form-label tm-new-badge">Experience Level</label>
               </div>
               <div class="col-sm-9">
                   <input type="text" name="exp" class="form-control" value="">
@@ -49,7 +52,7 @@ $id=$_SESSION['user_info']['id'];
           </div>
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="title" class="form-label">JOB Title</label>
+                  <label for="title" class="form-label tm-new-badge">JOB Title</label>
               </div>
               <div class="col-sm-9">
                   <input type="text" class="form-control" name="title" value="">
@@ -57,7 +60,7 @@ $id=$_SESSION['user_info']['id'];
           </div>
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="dis" class="form-label">Discription</label>
+                  <label for="dis" class="form-label tm-new-badge">Discription</label>
               </div>
               <div class="col-sm-9">
                   <input type="text" name="dis" class="form-control" value="">
@@ -65,15 +68,15 @@ $id=$_SESSION['user_info']['id'];
           </div>
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="res" class="form-label">Responsibilities</label>
+                  <label for="res" class="form-label tm-new-badge">Responsibilities</label>
               </div>
               <div class="col-sm-9">
-              <input type="text" class="form-control" id="address" name="res" value="">
+              <input type="text" class="form-control tm-new-badge" id="address" name="res" value="">
               </div>
           </div>
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="qua" class="form-label">Qualification</label>
+                  <label for="qua" class="form-label tm-new-badge">Qualification</label>
               </div>
               <div class="col-sm-9">
                   <input type="text" name="qua" class="form-control" value="">
@@ -81,7 +84,7 @@ $id=$_SESSION['user_info']['id'];
           </div>
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="type" class="form-label">Job Type</label>
+                  <label for="type" class="form-label tm-new-badge">Job Type</label>
               </div>
               <div class="col-sm-9">
                   <input type="text" name="type" class="form-control" value="">
@@ -89,7 +92,7 @@ $id=$_SESSION['user_info']['id'];
           </div>
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="place" class="form-label">Work Place</label>
+                  <label for="place" class="form-label tm-new-badge">Work Place</label>
               </div>
               <div class="col-sm-9">
                   <input type="text" name="place" class="form-control" value="">
@@ -97,7 +100,7 @@ $id=$_SESSION['user_info']['id'];
           </div>
           <div class="row mb-3">
               <div class="col-sm-3">
-                  <label for="location" class="form-label">Location</label>
+                  <label for="location" class="form-label tm-new-badge">Location</label>
               </div>
               <div class="col-sm-9">
                   <input type="text" name="location" class="form-control" value="">
@@ -105,11 +108,10 @@ $id=$_SESSION['user_info']['id'];
           </div>
 
                
-              <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+              <button type="submit"  value="Submit">Add Post</button>
              
             </form>
-          
-
+    </div>
 <?php
 }else{
    

@@ -3,8 +3,10 @@ session_start();
 include ("db_config/connect.php");
 include ("functions.php");
 
-if(!$_SESSION['user_info']){
-    header("location:login.php");
+if(!isset($_SESSION['user_info'])){
+    
+echo '<script>window.location.href = "https://jobopportunityiul.000webhostapp.com/login.php";</script>';
+
 }
 
 $id=$_SESSION['user_info']['id'];
@@ -29,6 +31,89 @@ $id=$_SESSION['user_info']['id'];
 </head>
 
 <body>
+    
+    <?php
+ if(isset($_GET['add']) && $_GET['add']==1)
+ {
+    ?>
+               
+    <form method="POST" action="addpost.php"  enctype='multipart/form-data'>
+   
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="exp" class="form-label">Experience Level</label>
+              </div>
+              <div class="col-sm-9">
+                  <input type="text" name="exp" class="form-control" value="">
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="title" class="form-label">JOB Title</label>
+              </div>
+              <div class="col-sm-9">
+                  <input type="text" class="form-control" name="title" value="">
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="dis" class="form-label">Discription</label>
+              </div>
+              <div class="col-sm-9">
+                  <input type="text" name="dis" class="form-control" value="">
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="res" class="form-label">Responsibilities</label>
+              </div>
+              <div class="col-sm-9">
+              <input type="text" class="form-control" id="address" name="res" value="">
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="qua" class="form-label">Qualification</label>
+              </div>
+              <div class="col-sm-9">
+                  <input type="text" name="qua" class="form-control" value="">
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="type" class="form-label">Job Type</label>
+              </div>
+              <div class="col-sm-9">
+                  <input type="text" name="type" class="form-control" value="">
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="place" class="form-label">Work Place</label>
+              </div>
+              <div class="col-sm-9">
+                  <input type="text" name="place" class="form-control" value="">
+              </div>
+          </div>
+          <div class="row mb-3">
+              <div class="col-sm-3">
+                  <label for="location" class="form-label">Location</label>
+              </div>
+              <div class="col-sm-9">
+                  <input type="text" name="location" class="form-control" value="">
+              </div>
+          </div>
+
+               
+              <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+             
+            </form>
+          
+
+<?php
+}else{
+   
+?>
    <header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
@@ -44,7 +129,7 @@ $id=$_SESSION['user_info']['id'];
                             <i class="fas fa-home"></i>
                             Home
                         </a></li>
-                    <li class="tm-nav-item"><a href="profile.php" class="tm-nav-link">
+                    <li class="tm-nav-item"><a href="Profile.php" class="tm-nav-link">
                             <i class="fas fa-pen"></i>
                             Profile
                         </a></li>
@@ -60,6 +145,7 @@ $id=$_SESSION['user_info']['id'];
             </nav>
            
     </header>
+    
     <div class="container-fluid">
         <main class="tm-main">
             <!-- Search form -->
@@ -73,6 +159,10 @@ $id=$_SESSION['user_info']['id'];
                     </form>
                 </div>
             </div>
+            <?php if($_SESSION['user_info']['admin']==1){
+               ?>
+               <a href="index.php?add=1">add</a>
+         <?php   } ?>
             <!--job opportunities-->
             <div class="row tm-row" id="jobs">
                
@@ -119,7 +209,7 @@ $id=$_SESSION['user_info']['id'];
             </footer>
         </main>
     </div>
-
+<?php } ?>
     <!-- <script src="js/templatemo-script.js"></script>
 
 

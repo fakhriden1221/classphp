@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
   include ("db_config/connect.php");
 ?>
 <!DOCTYPE html>
@@ -11,9 +14,7 @@
     <title>Form Example</title>
 </head>
 <body>
-<?php
-session_start();
-?>
+
 <section style="background-color: #eee;">
   <div class="container py-5">
     <div class="row">

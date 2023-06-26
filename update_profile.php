@@ -4,7 +4,8 @@ include ("db_config/connect.php");
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_info1'])) {
-    header("Location: login.php");
+    echo '<script>window.location.href = "https://jobopportunityiul.000webhostapp.com/login.php";</script>';
+
     exit();
 }
 
@@ -16,12 +17,10 @@ $address = $_POST['address'];
 $sql = "UPDATE users SET full_name='$full_name', email='$email', Phone='$phone', Address='$address' WHERE id='{$_SESSION['user_info1']['id']}'";
 $result = mysqli_query($conn, $sql);
 
-if (mysqli_affected_rows($conn) > 0) {
-    header("Location:index.php");
-    exit();
-} else {
-    echo "Error: " . mysqli_error($conn);
-}
 
-mysqli_close($con);
+    echo '<script>window.location.href = "https://jobopportunityiul.000webhostapp.com/index.php";</script>';
+
+    exit();
+
+mysqli_close($conn);
 ?>

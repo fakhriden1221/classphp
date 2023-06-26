@@ -16,10 +16,12 @@ if (isset($_POST['submit'])) {
         $sql = "INSERT INTO users (full_name, email, password) VALUES ('$full_name','$email', '$password')";
 
         if (mysqli_query($conn, $sql)) {
-            header("location:additional_info.php?record=1");
+                echo '<script>window.location.href = "https://jobopportunityiul.000webhostapp.com/additional_info.php?record=1";</script>';
+
             
         }
     } else {
-        header("location:register.php?error=1");
+            echo '<script>window.location.href = "https://jobopportunityiul.000webhostapp.com/register.php?error=1";</script>';
+
     }
 }

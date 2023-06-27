@@ -28,7 +28,7 @@ try {
    <br><br><br>
         <div class="d-flex justify-content-between tm-pt-45">
           <span class="tm-color-primary"></span>
-          <span class="tm-color-primary" id="date">${element.dateAdded}</span>
+          <span class="tm-color-primary" id="date">${element.dateAdded.slice(0,10)}</span>
         </div>
         <hr>
         <div class="d-flex justify-content-between"></div>

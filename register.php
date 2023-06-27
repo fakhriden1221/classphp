@@ -40,6 +40,22 @@
         <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password" required>
       </div>
 
+      <label for="phone">Phone</label>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+
+            <label for="address">Address</label>
+            <input type="text" name="address" placeholder="Address" required>
+
+            <label for="job_position">Job Position</label>
+            <input type="text" name="job_position" placeholder="Job Position" required>
+
+            <label for="image">Profile Photo</label>
+            <input type="file" name="image" id="image" required>
+            <img id="preview_image" src="#" alt="Preview" style="display: none; max-width: 300px; margin-top: 10px;">
+
+            <script src="js/image.js"></script>
+
+
       <button type="submit" name="submit">Create Account</button>
     </form>
     <hr>

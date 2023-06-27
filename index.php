@@ -37,7 +37,7 @@ $id=$_SESSION['user_info']['id'];
  {
     ?>
                
-               <div class="container">   
+    <div class="container">   
     <h2>Add Post</h2>
         
     <form method="POST" action="addpost.php"  enctype='multipart/form-data'>
@@ -112,6 +112,8 @@ $id=$_SESSION['user_info']['id'];
              
             </form>
     </div>
+          
+
 <?php
 }else{
    
@@ -121,7 +123,9 @@ $id=$_SESSION['user_info']['id'];
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
+            
             <div class="tm-site-header">
+                
                 <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
                 <h1 class="text-center">JobConnect</h1>
             </div>
@@ -143,6 +147,7 @@ $id=$_SESSION['user_info']['id'];
                             <i class="far fa-comments"></i>
                             Contact Us
                         </a></li>
+                   
                 </ul>
             </nav>
            
@@ -153,6 +158,11 @@ $id=$_SESSION['user_info']['id'];
             <!-- Search form -->
             <div class="row tm-row">
                 <div class="col-12">
+                    <a href="logout.php" class=" tm-nav-link">
+           <span class="position-absolute tm-new-badge">
+                            Log out
+           </span>
+                        </a>
                     <form method="GET" class="form-inline tm-mb-80 tm-search-form">
                         <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
                         <button class="tm-search-button" type="submit">
@@ -203,15 +213,7 @@ $id=$_SESSION['user_info']['id'];
                 </div>
             </div>
             <!--footer-->
-            <footer class="row tm-row">
-                <hr class="col-12">
-                 <div class="col-md-6 col-12 tm-color-gray">
-                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
-                </div>
-                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
-                    Copyright 2020 Xtra Blog Company Co. Ltd.
-                </div>
-            </footer>
+
         </main>
     </div>
 <?php } ?>
